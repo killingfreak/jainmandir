@@ -228,6 +228,40 @@ nav.links a:focus-visible {
     outline: 2px solid var(--gold);
 }
 
+/* .social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 18px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e6c98e;
+    text-decoration: none;
+
+    border: 1px solid rgba(230, 201, 142, 0.35);
+    border-radius: 50%;
+
+    transition: all 0.25s ease;
+}
+
+.social-links svg {
+    width: 19px;
+    height: 19px;
+}
+
+.social-links a:hover {
+    background: #e6c98e;
+    color: #1b1712;
+    transform: translateY(-2px);
+} */
+
 .social-links {
     display: flex;
     align-items: center;
