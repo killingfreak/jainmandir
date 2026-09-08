@@ -131,7 +131,105 @@ h3,
     height: 20px;
 }
 
+/* ============ NAV — BASE (desktop default) ============ */
+header.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--maroon-deep);
+    border-bottom: 1px solid rgba(230, 201, 142, 0.25);
+}
 
+.nav-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    color: var(--gold-bright);
+    font-family: var(--display);
+    font-size: 1.2rem;
+    line-height: 1.15;
+    min-width: 0;
+}
+
+.brand-text small {
+    display: block;
+    font-family: var(--serif-en);
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    opacity: 0.75;
+    margin-top: 3px;
+}
+
+nav.links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav.links a {
+    color: var(--stone);
+    font-size: 0.92rem;
+    padding: 4px 1px;
+    position: relative;
+}
+
+nav.links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -6px;
+    height: 1px;
+    background: var(--gold);
+    transition: right 0.3s ease;
+}
+
+nav.links a:hover::after,
+nav.links a:focus-visible::after {
+    right: 0;
+}
+
+nav.links a:focus-visible {
+    outline: none;
+    color: var(--gold-bright);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 7px 12px;
+    flex-shrink: 0;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid var(--gold);
+}
 
 /* ============ HERO — gateway framing ============ */
 .hero {
@@ -1223,102 +1321,3 @@ footer .copyright {
 
 
 
-/* ============ NAV — BASE (desktop default) ============ */
-header.site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--maroon-deep);
-    border-bottom: 1px solid rgba(230, 201, 142, 0.25);
-}
-
-.nav-inner {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 28px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 78px;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 0;
-}
-
-.brand-mark {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-}
-
-.brand-text {
-    color: var(--gold-bright);
-    font-family: var(--display);
-    font-size: 1.2rem;
-    line-height: 1.15;
-    min-width: 0;
-}
-
-.brand-text small {
-    display: block;
-    font-family: var(--serif-en);
-    font-style: normal;
-    font-size: 1rem;
-    color: var(--gold);
-    letter-spacing: 1.5px;
-    opacity: 0.75;
-    margin-top: 3px;
-}
-
-nav.links {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav.links a {
-    color: var(--stone);
-    font-size: 0.92rem;
-    padding: 4px 1px;
-    position: relative;
-}
-
-nav.links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 100%;
-    bottom: -6px;
-    height: 1px;
-    background: var(--gold);
-    transition: right 0.3s ease;
-}
-
-nav.links a:hover::after,
-nav.links a:focus-visible::after {
-    right: 0;
-}
-
-nav.links a:focus-visible {
-    outline: none;
-    color: var(--gold-bright);
-}
-
-.nav-toggle {
-    display: none;
-    background: none;
-    border: 1px solid var(--gold);
-    color: var(--gold-bright);
-    font-size: 1.1rem;
-    cursor: pointer;
-    padding: 7px 12px;
-    flex-shrink: 0;
-}
-
-.nav-toggle:focus-visible {
-    outline: 2px solid var(--gold);
-}
