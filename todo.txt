@@ -1,0 +1,2 @@
+#TODO: 
+1. add more media query for 720 + px (navbar)

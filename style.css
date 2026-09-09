@@ -231,6 +231,8 @@ nav.links a:focus-visible {
     outline: 2px solid var(--gold);
 }
 
+
+
 /* ============ HERO — gateway framing ============ */
 .hero {
     background: var(--maroon-deep);
@@ -1085,68 +1087,6 @@ footer .copyright {
     }
 }
 
-@media (max-width: 640px) {
-    .nav-inner {
-        padding: 0 12px;
-        height: auto;
-        min-height: 64px;
-        flex-wrap: wrap;
-        row-gap: 6px;
-    }
-
-    .brand {
-        gap: 8px;
-        min-width: 0;
-        /* critical: lets brand-text shrink instead of forcing overflow */
-        flex: 1 1 auto;
-    }
-
-    .brand-mark {
-        width: 26px;
-        height: 26px;
-    }
-
-    .brand-text {
-        font-size: 0.95rem;
-        min-width: 0;
-    }
-
-    .brand-text small {
-        font-size: 0.72rem;
-        letter-spacing: 0.5px;
-        margin-top: 1px;
-    }
-
-    .nav-toggle {
-        display: inline-block;
-        /* if this isn't already toggled elsewhere, keep it consistent with your existing breakpoint */
-        flex-shrink: 0;
-        padding: 5px 9px;
-        font-size: 0.9rem;
-    }
-
-}
-
-@media (max-width: 360px) {
-    .brand-text {
-        font-size: 0.85rem;
-    }
-
-    .brand-text small {
-        font-size: 0.65rem;
-    }
-
-    #contact-footer .social-links a {
-        width: 27px;
-        height: 27px;
-    }
-
-    #contact-footer .social-links svg {
-        width: 13px;
-        height: 13px;
-    }
-}
-
 #contact-footer .social-links {
     display: flex;
     justify-content: center;
@@ -1276,9 +1216,33 @@ footer .copyright {
     }
 
     .brand {
+        gap: 8px;
         min-width: 0;
         flex: 1 1 auto;
         overflow: hidden;
+    }
+
+    .brand-mark {
+        width: 26px;
+        height: 26px;
+    }
+
+    .brand-text {
+        font-size: 0.95rem;
+        min-width: 0;
+    }
+
+    .brand-text small {
+        font-size: 0.72rem;
+        letter-spacing: 0.5px;
+        margin-top: 1px;
+    }
+
+    .nav-toggle {
+        display: inline-block;
+        flex-shrink: 0;
+        padding: 5px 9px;
+        font-size: 0.9rem;
     }
 
     .nav-cta {
@@ -1316,6 +1280,18 @@ footer .copyright {
 
     .brand-text small {
         font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 360px) {
+    #contact-footer .social-links a {
+        width: 27px;
+        height: 27px;
+    }
+
+    #contact-footer .social-links svg {
+        width: 13px;
+        height: 13px;
     }
 }
 
