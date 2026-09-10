@@ -1,0 +1,313 @@
+/* ============================================
+   gallery.css
+   Page-specific styles for chitra.html only.
+   Relies on style.css for tokens, header/footer,
+   and shared classes (.container, .eyebrow, .btn).
+   ============================================ */
+
+/* ---------- Page banner (shared pattern with history.css) ---------- */
+.page-banner {
+    background: var(--maroon-deep);
+    padding: 56px 0 44px;
+    text-align: center;
+}
+
+.page-banner .eyebrow {
+    justify-content: center;
+    color: var(--gold);
+}
+
+.page-banner .eyebrow::before {
+    background: var(--gold);
+}
+
+.page-banner h1 {
+    color: var(--gold-bright);
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.breadcrumb a:hover {
+    border-color: var(--gold);
+}
+
+.breadcrumb .sep {
+    opacity: 0.5;
+}
+
+.topic-block+.topic-block {
+    margin-top: 90px;
+    padding-top: 90px;
+    border-top: 1px solid var(--hair);
+}
+
+@media (max-width: 720px) {
+    .topic-block+.topic-block {
+        margin-top: 60px;
+        padding-top: 60px;
+    }
+}
+
+/* ---------- Live broadcast embed ---------- */
+.live-embed {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--maroon-deep);
+    padding: 10px;
+    border-top: 2px solid var(--gold);
+}
+
+.live-embed .fb-frame {
+    width: 100%;
+    aspect-ratio: 9 / 14;
+    background: #000;
+}
+
+.live-embed .fb-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.live-note {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    margin-top: 22px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.live-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 22px;
+}
+
+/* ---------- Filter tabs ---------- */
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-tab {
+    padding: 8px 20px;
+    border: 1px solid var(--gold-antique);
+    background: transparent;
+    color: var(--maroon-dark);
+    font-family: var(--body);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-tab:hover {
+    background: rgba(169, 123, 47, 0.1);
+}
+
+.filter-tab.active {
+    background: var(--maroon-deep);
+    color: var(--gold-bright);
+    border-color: var(--maroon-deep);
+}
+
+/* ---------- Photo grid ---------- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.photo-grid figure {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    background: var(--stone);
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(6%);
+    transition: transform 0.4s ease;
+}
+
+.photo-grid figure:hover img {
+    transform: scale(1.06);
+}
+
+.photo-grid figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 12px;
+    background: linear-gradient(to top, rgba(33, 6, 6, 0.88), transparent);
+    color: var(--stone);
+    font-size: 0.78rem;
+    font-family: var(--serif-en);
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-grid figure:hover figcaption,
+.photo-grid figure:focus-within figcaption {
+    opacity: 1;
+}
+
+@media (max-width: 640px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 3, 3, 0.94);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 500;
+    padding: 30px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-inner {
+    max-width: 92vw;
+    max-height: 86vh;
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 92vw;
+    max-height: 78vh;
+    object-fit: contain;
+    border: 4px solid var(--stone);
+}
+
+.lightbox-cap {
+    color: var(--stone);
+    margin-top: 14px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: background 0.2s;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: rgba(230, 201, 142, 0.15);
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 20px;
+}
+
+.lightbox-nav.prev {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.lightbox-nav.next {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 640px) {
+
+    .lightbox-nav,
+    .lightbox-close {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+}
+
+/* ---------- Video grid ---------- */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 26px;
+}
+
+.video-card {
+    background: var(--maroon-deep);
+    padding: 10px;
+    border-top: 2px solid var(--gold);
+}
+
+.video-card .frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-card video,
+.video-card iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-card figcaption {
+    color: var(--stone);
+    font-size: 0.85rem;
+    text-align: center;
+    padding-top: 10px;
+    font-family: var(--serif-en);
+    font-style: italic;
+}

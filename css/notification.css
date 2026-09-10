@@ -1,0 +1,309 @@
+/* ============================================
+   suchana.css
+   Page-specific styles for suchana.html only.
+   Relies on style.css for tokens, header/footer,
+   and shared classes (.container, .eyebrow, .btn).
+   ============================================ */
+
+.page-banner {
+    background: var(--maroon-deep);
+    padding: 56px 0 44px;
+    text-align: center;
+}
+
+.page-banner .eyebrow {
+    justify-content: center;
+    color: var(--gold);
+}
+
+.page-banner .eyebrow::before {
+    background: var(--gold);
+}
+
+.page-banner h1 {
+    color: var(--gold-bright);
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.breadcrumb a:hover {
+    border-color: var(--gold);
+}
+
+.breadcrumb .sep {
+    opacity: 0.5;
+}
+
+.topic-block + .topic-block {
+    margin-top: 90px;
+    padding-top: 90px;
+    border-top: 1px solid var(--hair);
+}
+
+@media (max-width: 720px) {
+    .topic-block + .topic-block {
+        margin-top: 60px;
+        padding-top: 60px;
+    }
+}
+
+/* ---------- Notice list ---------- */
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notice-card {
+    border: 1px solid var(--hair);
+    border-left: 3px solid var(--gold-antique);
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.notice-card.is-today {
+    border-left-color: var(--maroon);
+    background: rgba(116, 28, 28, 0.04);
+}
+
+.notice-main h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.notice-main p {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    max-width: 560px;
+}
+
+.notice-meta {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.notice-date {
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--maroon-dark);
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.notice-time {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 2px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    border: 1px solid currentColor;
+}
+
+.badge.today {
+    color: var(--maroon);
+}
+
+.badge.upcoming {
+    color: var(--gold-antique);
+}
+
+.badge.past {
+    color: var(--ink-soft);
+    opacity: 0.6;
+}
+
+.empty-note {
+    text-align: center;
+    color: var(--ink-soft);
+    font-family: var(--serif-en);
+    font-style: italic;
+    padding: 30px 0;
+}
+
+/* ---------- Bidding cards ---------- */
+.bid-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-bottom: 50px;
+}
+
+.bid-card {
+    background: var(--maroon-deep);
+    padding: 26px;
+    border-top: 2px solid var(--gold);
+    position: relative;
+}
+
+.bid-card .bid-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    margin-bottom: 12px;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+}
+
+.bid-card .bid-status.status-live {
+    background: var(--gold);
+    color: var(--maroon-deep);
+    border-color: var(--gold);
+}
+
+.bid-card .bid-status.status-closed {
+    opacity: 0.5;
+}
+
+.bid-card h3 {
+    color: var(--gold-bright);
+    font-size: 1.05rem;
+    margin-bottom: 14px;
+    font-family: var(--display);
+}
+
+.bid-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: var(--stone);
+    padding: 8px 0;
+    border-top: 1px solid rgba(230, 201, 142, 0.15);
+}
+
+.bid-row:first-of-type {
+    border-top: none;
+}
+
+.bid-row .label {
+    opacity: 0.65;
+}
+
+.bid-row .value {
+    font-weight: 600;
+    color: var(--gold-bright);
+}
+
+/* ---------- Bid form ---------- */
+.bid-form {
+    max-width: 620px;
+    margin: 0 auto;
+    border: 1px solid var(--gold-antique);
+    padding: 36px;
+}
+
+.bid-form h3 {
+    margin-bottom: 6px;
+}
+
+.bid-form .form-note {
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+    margin-bottom: 26px;
+}
+
+.form-field {
+    margin-bottom: 18px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--hair);
+    background: #fff;
+    font-family: var(--body);
+    font-size: 0.95rem;
+    color: var(--ink);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: 2px solid var(--gold-antique);
+    outline-offset: 1px;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-error {
+    color: var(--maroon);
+    font-size: 0.82rem;
+    margin-top: 6px;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+.bid-form .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.form-fine-print {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+    font-family: var(--serif-en);
+    font-style: italic;
+    margin-top: 18px;
+}
+
+@media (max-width: 600px) {
+    .notice-card {
+        flex-direction: column;
+    }
+
+    .notice-meta {
+        text-align: left;
+    }
+
+    .bid-form {
+        padding: 26px 20px;
+    }
+}

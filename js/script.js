@@ -29,3 +29,4 @@ window.addEventListener('scroll', () => toTop.classList.toggle('show', window.sc
 toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 document.getElementById('year').textContent = new Date().getFullYear();
+

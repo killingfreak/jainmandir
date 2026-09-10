@@ -1,0 +1,171 @@
+/* ============================================
+   history.css
+   Page-specific styles for history.html only.
+   Relies on style.css for tokens (--maroon-deep,
+   --gold, --stone, etc.), header/footer, and
+   shared classes (.container, .eyebrow, .btn,
+   .history-wrap, .history-fig, .pullquote,
+   .fine-print, .section-head, .hr-orn).
+   ============================================ */
+
+/* ---------- Page banner (replaces homepage hero on this page) ---------- */
+.page-banner {
+    background: var(--maroon-deep);
+    padding: 56px 0 44px;
+    text-align: center;
+}
+
+.page-banner .eyebrow {
+    justify-content: center;
+    color: var(--gold);
+}
+
+.page-banner .eyebrow::before {
+    background: var(--gold);
+}
+
+.page-banner h1 {
+    color: var(--gold-bright);
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--gold);
+    opacity: 0.7;
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.breadcrumb a:hover {
+    border-color: var(--gold);
+}
+
+.breadcrumb .sep {
+    opacity: 0.5;
+}
+
+/* ---------- Section dividers between the three topics ---------- */
+.topic-block+.topic-block {
+    margin-top: 90px;
+    padding-top: 90px;
+    border-top: 1px solid var(--hair);
+}
+
+@media (max-width: 720px) {
+    .topic-block+.topic-block {
+        margin-top: 64px;
+        padding-top: 64px;
+    }
+}
+
+/* ---------- Two-photo grid (used in the miracles section) ---------- */
+.duo-fig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    margin-top: 8px;
+}
+
+.duo-fig .frame {
+    border: 1px solid var(--gold-antique);
+    padding: 8px;
+}
+
+.duo-fig img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    filter: sepia(8%) saturate(92%);
+}
+
+.duo-fig figcaption {
+    margin-top: 10px;
+    font-family: var(--serif-en);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .duo-fig {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Goshala layout (text + figure, mirrored) ---------- */
+.goshala-wrap {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 56px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .goshala-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .goshala-wrap .history-fig {
+        order: -1;
+    }
+}
+
+/* ---------- Small stat row (goshala numbers) ---------- */
+.stat-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat {
+    border-left: 2px solid var(--gold-antique);
+    padding-left: 16px;
+}
+
+.stat .num {
+    display: block;
+    font-family: var(--display);
+    font-size: 2rem;
+    color: var(--maroon);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat .label {
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+}
+
+/* ---------- Closing CTA strip ---------- */
+.cta-strip {
+    background: var(--stone);
+    text-align: center;
+    padding: 80px 0;
+}
+
+.cta-strip h2 {
+    margin-bottom: 14px;
+}
+
+.cta-strip p {
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+.cta-strip .cta-row {
+    justify-content: center;
+}

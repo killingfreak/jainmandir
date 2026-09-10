@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सूचना एवं बोलियां | मंदिर</title>
+    <!-- Assuming you have a main style.css for shared styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- The page-specific CSS you provided -->
+    <link rel="stylesheet" href="css/notification.css">
+</head>
+
+<body>
+
+    <!-- Page Banner -->
+    <header class="page-banner">
+        <div class="container">
+            <div class="eyebrow">अपडेट्स</div>
+            <h1>सूचना एवं बोलियां</h1>
+            <div class="breadcrumb">
+                <a href="index.html">मुख्य पृष्ठ</a>
+                <span class="sep">/</span>
+                <span>सूचनाएं</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Notices Section -->
+        <section class="topic-block">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="color: var(--maroon-deep); font-family: var(--display);">नवीनतम सूचनाएं</h2>
+                <p style="color: var(--ink-soft);">मंदिर समिति द्वारा जारी की गई ताज़ा जानकारी और कार्यक्रम</p>
+            </div>
+
+            <!-- This div will be populated by JavaScript -->
+            <div id="notice-container" class="notice-list">
+                <!-- Fallback if JS fails or data is empty -->
+                <div class="empty-note">लोड हो रहा है...</div>
+            </div>
+        </section>
+
+        <!-- Bidding Section -->
+        <section class="topic-block">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 style="color: var(--maroon-deep); font-family: var(--display);">वर्तमान बोलियां (Bids)</h2>
+                <p style="color: var(--ink-soft);">आगामी कार्यक्रमों में विशेष अधिकार प्राप्त करने हेतु</p>
+            </div>
+
+            <!-- This grid will be populated by JavaScript -->
+            <div id="bid-container" class="bid-grid"></div>
+
+            <!-- Bidding Form (Static) -->
+            <div class="bid-form">
+                <h3>बोली सबमिट करें</h3>
+                <p class="form-note">अपनी बोली दर्ज़ करने के लिए नीचे दिया गया फॉर्म भरें। समिति आपसे संपर्क करेगी।</p>
+
+                <form id="submitBidForm">
+                    <div class="form-field">
+                        <label for="bid-event">कार्यक्रम / अधिकार का नाम</label>
+                        <select id="bid-event" required>
+                            <option value="">-- चुनें --</option>
+                            <option value="रथयात्रा">रथयात्रा 2026 — प्रथम पूजा</option>
+                            <option value="शरद पूर्णिमा">शरद पूर्णिमा शांतिधारा</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label for="bid-amount">बोली की राशि (₹)</label>
+                        <input type="number" id="bid-amount" placeholder="उदा. 5100" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bid-name">आपका नाम</label>
+                        <input type="text" id="bid-name" placeholder="अपना पूरा नाम लिखें" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="bid-phone">मोबाइल नंबर</label>
+                        <input type="tel" id="bid-phone" placeholder="10 अंकों का नंबर" required>
+                    </div>
+                    <button type="submit" class="btn">बोली जमा करें</button>
+                    <p class="form-fine-print">* यह बोली केवल एक अनुरोध है, अंतिम पुष्टि समिति द्वारा की जाएगी।</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- Script to render the data into the HTML structure -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // 1. Render Notices
+            const noticeContainer = document.getElementById("notice-container");
+            if (typeof NOTICES !== 'undefined' && NOTICES.length > 0) {
+                noticeContainer.innerHTML = ""; // Clear loader
+
+                NOTICES.forEach(notice => {
+                    // Logic for badges (demo purposes)
+                    const today = new Date().toISOString().split('T')[0];
+                    let badgeClass = "upcoming";
+                    let badgeText = "आगामी";
+
+                    if (notice.date === today) {
+                        badgeClass = "today";
+                        badgeText = "आज";
+                    } else if (notice.date < today) {
+                        badgeClass = "past";
+                        badgeText = "समाप्त";
+                    }
+
+                    const cardHTML = `
+                        <div class="notice-card ${badgeClass === 'today' ? 'is-today' : ''}">
+                            <div class="notice-main">
+                                <h3>${notice.title}</h3>
+                                <p>${notice.desc}</p>
+                            </div>
+                            <div class="notice-meta">
+                                <div class="notice-date">${notice.date}</div>
+                                <div class="notice-time">समय: ${notice.time}</div>
+                                <div class="badge ${badgeClass}">${badgeText}</div>
+                            </div>
+                        </div>
+                    `;
+                    noticeContainer.innerHTML += cardHTML;
+                });
+            } else {
+                noticeContainer.innerHTML = `<div class="empty-note">वर्तमान में कोई नई सूचना नहीं है।</div>`;
+            }
+
+            // 2. Render Bids
+            const bidContainer = document.getElementById("bid-container");
+            if (typeof BIDS !== 'undefined' && BIDS.length > 0) {
+                bidContainer.innerHTML = "";
+
+                BIDS.forEach(bid => {
+                    let statusClass = bid.status === "चालू" ? "status-live" : (bid.status === "समाप्त" ? "status-closed" : "");
+
+                    // Formatting the date to be more readable
+                    let closeDate = new Date(bid.closes);
+                    let formattedCloseDate = closeDate.toLocaleDateString('hi-IN') + " " + closeDate.toLocaleTimeString('hi-IN', { hour: '2-digit', minute: '2-digit' });
+
+                    const bidHTML = `
+                        <div class="bid-card">
+                            <span class="bid-status ${statusClass}">${bid.status}</span>
+                            <h3>${bid.event}</h3>
+                            <div class="bid-row">
+                                <span class="label">वर्तमान बोली:</span>
+                                <span class="value">${bid.currentBid}</span>
+                            </div>
+                            <div class="bid-row">
+                                <span class="label">अग्रणी:</span>
+                                <span class="value">${bid.leader}</span>
+                            </div>
+                            <div class="bid-row">
+                                <span class="label">अंतिम तिथि:</span>
+                                <span class="value" style="font-size: 0.8rem;">${formattedCloseDate}</span>
+                            </div>
+                        </div>
+                    `;
+                    bidContainer.innerHTML += bidHTML;
+                });
+            }
+        });
+    </script>
+
+    <!-- Load the Data File -->
+    <script src="js/notification-data.js"></script>
+</body>
+
+</html>

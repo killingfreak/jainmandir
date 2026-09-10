@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>चित्र गैलरी — श्री दिगम्बर जैन अतिशय क्षेत्र, भोजपुर</title>
+    <meta name="description"
+        content="श्री दिगम्बर जैन अतिशय क्षेत्र भोजपुर की फोटो एवं वीडियो गैलरी, तथा अभिषेक व शांतिधारा का लाइव प्रसारण।">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Hind:wght@400;500;600&family=EB+Garamond:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+
+    <header class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html#top" class="brand" aria-label="मुख पृष्ठ पर जाएँ">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path d="M20 4C17 8 15 11 15 15C15 19 17.5 21 20 21C22.5 21 25 19 25 15C25 11 23 8 20 4Z"
+                        fill="#e6c98e" />
+                    <path d="M14 21H26L28 27H12L14 21Z" fill="#e6c98e" />
+                    <rect x="10" y="27" width="20" height="3" fill="#e6c98e" opacity="0.85" />
+                    <path d="M20 30V36" stroke="#e6c98e" stroke-width="1.5" />
+                    <path d="M15 36H25" stroke="#e6c98e" stroke-width="1.5" />
+                </svg>
+                <span class="brand-text">श्री भोजपुर अतिशय क्षेत्र<small>Shantinagar &middot; Raisen,
+                        M.P.</small></span>
+            </a>
+
+            <nav class="links" id="navLinks">
+                <a href="index.html#top">होम</a>
+                <a href="index.html#timings">दर्शन समय</a>
+                <a href="history.html">इतिहास</a>
+                <a href="index.html#nearby">समीपवर्ती क्षेत्र</a>
+                <a href="chitra.html" aria-current="page">गैलरी</a>
+                <a href="suchana.html">सूचना</a>
+                <a href="index.html#donate">दान</a>
+                <a href="index.html#committee">संपर्क</a>
+                <a href="index.html#map">मानचित्र</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="tel:+917909604925" class="btn btn-primary nav-cta" aria-label="संपर्क करें, कॉल करें">
+                    <svg class="nav-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M6.6 10.8c1.4 2.8 3.7 5.1 6.5 6.5l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 4.2 2.9 3.6 3.4 3.1 4 3.1h3.4c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1L6.6 10.8z"
+                            fill="currentColor" />
+                    </svg>
+                    <span class="nav-cta-text">संपर्क करें</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="मेनू खोलें" aria-expanded="false"
+                    aria-controls="navLinks">मेनू</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============ PAGE BANNER ============ -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="eyebrow">चित्र एवं वीडियो</div>
+            <h1>चित्र गैलरी</h1>
+            <div class="breadcrumb">
+                <a href="index.html#top">होम</a>
+                <span class="sep">/</span>
+                <span>गैलरी</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <!-- ============ LIVE BROADCAST ============ -->
+            <div class="topic-block" id="live">
+                <div class="section-head center">
+                    <div class="eyebrow">लाइव प्रसारण</div>
+                    <h2>अभिषेक एवं शांतिधारा — लाइव देखें</h2>
+                </div>
+
+                <!--
+          FACEBOOK PAGE PLUGIN:
+          This shows the temple's Facebook Page timeline. When the committee
+          goes live on Facebook during अभिषेक/शांतिधारा, it appears here
+          automatically — no code changes needed for each live session.
+          Requires the Facebook SDK script placed once near the end of <body>.
+        -->
+                <div class="live-embed">
+                    <div class="fb-frame">
+                        <div id="fb-root"></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/share/1KMn5gtkCP/" data-tabs="timeline"
+                            data-width="500" data-height="700" data-small-header="true"
+                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                        </div>
+                    </div>
+                </div>
+
+                <p class="live-note">जब कमेटी द्वारा अभिषेक या शांतिधारा का लाइव प्रसारण फेसबुक पर शुरू किया जाता है, वह
+                    यहां
+                    स्वतः दिखाई देगा। सटीक दर्शन व अभिषेक समय के लिए होम पेज पर <a href="index.html#timings"
+                        style="text-decoration:underline;">दर्शन समय</a> देखें।</p>
+
+                <div class="live-actions">
+                    <a href="https://www.facebook.com/share/1KMn5gtkCP/" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline">फेसबुक पेज पर सीधे देखें</a>
+                </div>
+            </div>
+
+            <!-- ============ PHOTO GALLERY ============ -->
+            <div class="topic-block" id="photos">
+                <div class="section-head center">
+                    <div class="eyebrow">फोटो गैलरी</div>
+                    <h2>मंदिर एवं उत्सव के चित्र</h2>
+                </div>
+
+                <div class="filter-tabs" id="filterTabs">
+                    <button class="filter-tab active" data-filter="all">सभी</button>
+                    <button class="filter-tab" data-filter="mandir">मंदिर</button>
+                    <button class="filter-tab" data-filter="abhishek">अभिषेक</button>
+                    <button class="filter-tab" data-filter="shantidhara">शांतिधारा</button>
+                    <button class="filter-tab" data-filter="utsav">उत्सव</button>
+                </div>
+
+                <div class="photo-grid" id="photoGrid">
+                    <figure data-category="mandir">
+                        <img src="/gallery/photos/mandir-1.jpg"
+                            alt="मंदिर प्रांगण — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>मंदिर प्रांगण</figcaption>
+                    </figure>
+                    <figure data-category="mandir">
+                        <img src="/gallery/photos/mandir-2.jpg"
+                            alt="मूलनायक भगवान शांतिनाथ — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>मूलनायक भगवान शांतिनाथ</figcaption>
+                    </figure>
+                    <figure data-category="abhishek">
+                        <img src="/gallery/photos/abhishek-1.jpg"
+                            alt="प्रातःकालीन अभिषेक — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>प्रातःकालीन अभिषेक</figcaption>
+                    </figure>
+                    <figure data-category="abhishek">
+                        <img src="/gallery/photos/abhishek-2.jpg"
+                            alt="अभिषेक की तैयारी — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>अभिषेक की तैयारी</figcaption>
+                    </figure>
+                    <figure data-category="shantidhara">
+                        <img src="/gallery/photos/shantidhara-1.jpg"
+                            alt="शांतिधारा महोत्सव — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>शांतिधारा महोत्सव</figcaption>
+                    </figure>
+                    <figure data-category="utsav">
+                        <img src="/gallery/photos/utsav-1.jpg"
+                            alt="वार्षिक उत्सव — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>वार्षिक उत्सव</figcaption>
+                    </figure>
+                    <figure data-category="utsav">
+                        <img src="/gallery/photos/utsav-2.jpg"
+                            alt="रथयात्रा — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>रथयात्रा</figcaption>
+                    </figure>
+                    <figure data-category="mandir">
+                        <img src="/gallery/photos/goshala.jpg"
+                            alt="श्री विद्यासागर गौशाला — प्लेसहोल्डर, कृपया वास्तविक फोटो से बदलें">
+                        <figcaption>श्री विद्यासागर गौशाला</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- ============ VIDEO GALLERY ============ -->
+            <div class="topic-block" id="videos">
+                <div class="section-head center">
+                    <div class="eyebrow">वीडियो गैलरी</div>
+                    <h2>उत्सव एवं आयोजन के वीडियो</h2>
+                </div>
+
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="frame">
+                            <video controls preload="metadata" poster="/gallery/videos/abhishek-poster.jpg">
+                                <source src="/gallery/videos/abhishek.mp4" type="video/mp4">
+                                आपका ब्राउज़र वीडियो चलाने में असमर्थ है।
+                            </video>
+                        </div>
+                        <figcaption>अभिषेक विधि — संक्षिप्त वीडियो</figcaption>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="frame">
+                            <video controls preload="metadata" poster="/gallery/videos/shantidhara-poster.jpg">
+                                <source src="/gallery/videos/shantidhara.mp4" type="video/mp4">
+                                आपका ब्राउज़र वीडियो चलाने में असमर्थ है।
+                            </video>
+                        </div>
+                        <figcaption>शांतिधारा महोत्सव</figcaption>
+                    </div>
+
+                    <!--
+            YouTube embed example — since the temple's YouTube channel is
+            already linked in the footer, individual videos uploaded there
+            can be embedded like this (replace VIDEO_ID with the real one):
+          -->
+                    <div class="video-card">
+                        <div class="frame">
+                            <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="मंदिर वीडियो"
+                                allowfullscreen></iframe>
+                        </div>
+                        <figcaption>वार्षिक उत्सव — यूट्यूब वीडियो</figcaption>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="बंद करें">✕</button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="पिछला फोटो">‹</button>
+        <div class="lightbox-inner">
+            <img id="lightboxImg" src="" alt="">
+            <p class="lightbox-cap" id="lightboxCap"></p>
+        </div>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="अगला फोटो">›</button>
+    </div>
+
+    <footer id="contact-footer">
+        <div class="container">
+            <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M20 4C17 8 15 11 15 15C15 19 17.5 21 20 21C22.5 21 25 19 25 15C25 11 23 8 20 4Z"
+                    fill="#e6c98e" />
+                <path d="M14 21H26L28 27H12L14 21Z" fill="#e6c98e" />
+                <rect x="10" y="27" width="20" height="3" fill="#e6c98e" opacity="0.85" />
+            </svg>
+            <h3>॥ जय जिनेन्द्र ॥</h3>
+            <p class="addr">श्री दिगम्बर जैन अतिशय क्षेत्र, शांतिनगर भोजपुर, जिला रायसेन, मध्य प्रदेश</p>
+            <div class="foot-links">
+                <a href="index.html#timings">दर्शन समय</a>
+                <a href="history.html">इतिहास</a>
+                <a href="chitra.html">गैलरी</a>
+                <a href="suchana.html">सूचना</a>
+                <a href="index.html#donate">दान</a>
+                <a href="index.html#committee">संपर्क</a>
+                <a href="tel:+917909604925">7909604925</a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/bhojpurjainmandir?igsi=MWFqejNjMThsd3A1dw==" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram" class="icon-instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor"
+                            stroke-width="2" />
+                        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/share/1KMn5gtkCP/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook" class="icon-facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14 8h3V4h-3c-2.8 0-5 2.2-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.6.4-1 1-1z"
+                            fill="currentColor" />
+                    </svg>
+                </a>
+                <a href="https://chat.whatsapp.com/BDwOjSt4ggu29MuZAZK6Yb" target="_blank" rel="noopener noreferrer"
+                    aria-label="WhatsApp" class="icon-whatsapp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 4.1A9.9 9.9 0 0 0 12.1 1
+                     C6.6 1 2.1 5.5 2.1 11
+                     c0 1.8.5 3.6 1.4 5.1L2 22
+                     l6-1.5c1.4.8 2.9 1.2 4.5 1.2
+                     5.5 0 10-4.5 10-10
+                     0-2.7-1-5.2-2.5-7.6z" fill="none" stroke="currentColor" stroke-width="1.8" />
+                        <path d="M8.5 7.5c.3-.3.6-.3.9-.1
+                     l1.1 1.8c.2.3.1.6-.1.9
+                     l-.7.7c.8 1.5 2 2.7 3.5 3.5
+                     l.7-.7c.2-.2.6-.3.9-.1
+                     l1.8 1.1c.3.2.3.6.1.9
+                     -.5.8-1.2 1.2-2.1 1.1
+                     -4.1-.6-7.4-3.9-8-8
+                     -.1-.9.3-1.7 1-2.1z" fill="currentColor" />
+                    </svg>
+                </a>
+                <a href="https://youtube.com/channel/UCMpEmd3uC0k5vnYtB0uBDTw?si=YQW9wvdhkdDPeEAL" target="_blank"
+                    rel="noopener noreferrer" aria-label="YouTube" class="icon-youtube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M23 12s0-3.6-.5-5.3c-.3-1-1-1.7-2-2C18.9 4.2 12 4.2 12 4.2s-6.9 0-8.5.5c-1 .3-1.7 1-2 2C1 8.4 1 12 1 12s0 3.6.5 5.3c.3 1 1 1.7 2 2 1.6.5 8.5.5 8.5.5s6.9 0 8.5-.5c1-.3 1.7-1 2-2 .5-1.7.5-5.3.5-5.3z"
+                            fill="none" stroke="currentColor" stroke-width="1.6" />
+                        <path d="M10 9l5 3-5 3V9z" fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
+
+            <h3>आप अधिक से अधिक जुड़कर की धर्म प्रभावना में सहयोगी बने।</h3>
+            <div class="copyright">© <span id="year"></span> श्री दिगम्बर जैन अतिशय क्षेत्र, शांतिनगर भोजपुर। सर्वाधिकार
+                सुरक्षित।</div>
+        </div>
+    </footer>
+
+    <button id="toTop" aria-label="ऊपर जाएँ">↑</button>
+
+    <!-- Facebook SDK, required once for the fb-page plugin above -->
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/hi_IN/sdk.js#xfbml=1&version=v19.0"></script>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        const toTop = document.getElementById('toTop');
+        window.addEventListener('scroll', () => {
+            toTop.classList.toggle('show', window.scrollY > 400);
+        });
+        toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        /* ---------- Photo filter ---------- */
+        const tabs = document.querySelectorAll('.filter-tab');
+        const figures = document.querySelectorAll('#photoGrid figure');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const filter = tab.dataset.filter;
+                figures.forEach(fig => {
+                    fig.style.display = (filter === 'all' || fig.dataset.category === filter) ? '' : 'none';
+                });
+            });
+        });
+
+        /* ---------- Lightbox ---------- */
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCap = document.getElementById('lightboxCap');
+        const visibleFigures = () => Array.from(figures).filter(f => f.style.display !== 'none');
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            const list = visibleFigures();
+            if (!list.length) return;
+            currentIndex = index;
+            const fig = list[currentIndex];
+            const img = fig.querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCap.textContent = fig.querySelector('figcaption')?.textContent || '';
+            lightbox.classList.add('open');
+        }
+
+        figures.forEach((fig) => {
+            fig.addEventListener('click', () => {
+                const list = visibleFigures();
+                openLightbox(list.indexOf(fig));
+            });
+        });
+
+        document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+
+        document.getElementById('lightboxPrev').addEventListener('click', () => {
+            const list = visibleFigures();
+            currentIndex = (currentIndex - 1 + list.length) % list.length;
+            openLightbox(currentIndex);
+        });
+        document.getElementById('lightboxNext').addEventListener('click', () => {
+            const list = visibleFigures();
+            currentIndex = (currentIndex + 1) % list.length;
+            openLightbox(currentIndex);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape') lightbox.classList.remove('open');
+            if (e.key === 'ArrowLeft') document.getElementById('lightboxPrev').click();
+            if (e.key === 'ArrowRight') document.getElementById('lightboxNext').click();
+        });
+    </script>
+
+</body>
+
+</html>
