@@ -1346,3 +1346,15 @@ footer .copyright {
     }
 }
 
+.marquee-link {
+    color: var(--gold-bright);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.marquee-link:hover {
+    color: #fff;
+}
+
