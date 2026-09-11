@@ -82,10 +82,18 @@
     padding: 8px;
 }
 
-.duo-fig img {
+/* .duo-fig img {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    filter: sepia(8%) saturate(92%);
+} */
+
+.duo-fig img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: var(--stone);
     filter: sepia(8%) saturate(92%);
 }
 

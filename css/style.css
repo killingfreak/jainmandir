@@ -1295,5 +1295,54 @@ footer .copyright {
     }
 }
 
+/* ============ बुलेटिन मार्की (गौशाला दान संदेश) ============ */
+.marquee-strip {
+    background: var(--maroon-deep);
+    border-bottom: 1px solid rgba(230, 201, 142, 0.25);
+    overflow: hidden;
+}
 
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 26s linear infinite;
+}
+
+.marquee-track span {
+    padding: 10px 50px;
+    white-space: nowrap;
+    color: var(--gold-bright);
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 0.92rem;
+    letter-spacing: 0.3px;
+}
+
+.marquee-strip:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .marquee-track span {
+        padding: 8px 30px;
+        font-size: 0.82rem;
+    }
+}
 
