@@ -1356,4 +1356,29 @@ footer .copyright {
 .marquee-link:hover {
     color: #fff;
 }
+/* railway/airport icons */
+.site-icons {
+    display: inline-flex;
+    gap: 6px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.site-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--gold-antique);
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .site-icons {
+        margin-right: 6px;
+    }
+
+    .site-icon {
+        width: 17px;
+        height: 17px;
+    }
+}
 
