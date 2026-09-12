@@ -177,3 +177,16 @@
 .cta-strip .cta-row {
     justify-content: center;
 }
+
+/* QR AND BANK */
+.goshala-donate {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--hair);
+}
+
+.goshala-donate-title {
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--maroon-dark);
+}
