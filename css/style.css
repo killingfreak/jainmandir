@@ -1297,8 +1297,9 @@ footer .copyright {
 
 /* ============ बुलेटिन मार्की (गौशाला दान संदेश) ============ */
 .marquee-strip {
-    background: var(--gold);
-    border-bottom: 2px solid var(--maroon-deep);
+    background: var(--maroon);
+    border-top: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
     overflow: hidden;
 }
 
@@ -1311,7 +1312,7 @@ footer .copyright {
 .marquee-track span {
     padding: 12px 50px;
     white-space: nowrap;
-    color: var(--maroon-deep);
+    color: var(--gold-bright);
     font-family: var(--body);
     font-weight: 700;
     font-size: 1.05rem;
@@ -1347,15 +1348,17 @@ footer .copyright {
 }
 
 .marquee-link {
-    color: var(--maroon-deep);
+    color: var(--gold);
     text-decoration: underline;
     text-underline-offset: 2px;
     font-weight: 800;
 }
 
 .marquee-link:hover {
-    color: #fff;
+    color: #11eef2f1;
 }
+
+
 /* railway/airport icons */
 .site-icons {
     display: inline-flex;
