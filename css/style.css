@@ -1358,6 +1358,11 @@ footer .copyright {
     color: #11eef2f1;
 }
 
+.marquee-marker {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
 
 /* railway/airport icons */
 .site-icons {
