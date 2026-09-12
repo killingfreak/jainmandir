@@ -1368,9 +1368,9 @@ footer .copyright {
 }
 
 .site-icon {
-    width: 20px;
-    height: 20px;
-    color: var(--gold-antique);
+    width: 25px;
+    height: 25px;
+    color: deepskyblue;
     flex-shrink: 0;
 }
 
